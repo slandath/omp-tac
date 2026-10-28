@@ -1,0 +1,19 @@
+{
+  "name": "omp-tac",
+  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/ruby:1": {
+      "version": "3.3.11"
+    }
+  },
+  "postCreateCommand": "bundle install",
+  "forwardPorts": [4000],
+  "portsAttributes": {
+    "4000": { "label": "Jekyll site", "onAutoForward": "openBrowser" }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["redhat.vscode-yaml"]
+    }
+  }
+}
